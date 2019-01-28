@@ -21,7 +21,7 @@ class EventsController < ApplicationController
         render 'new'
       end
   end
-end
+
 private
 
   def event_params
@@ -32,3 +32,4 @@ private
             username == "admin" && password == "admin"
         end
   end
+end

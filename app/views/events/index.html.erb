@@ -1,9 +1,12 @@
 <h1>All events</h1>
-<ul>
-<% for event in @events %>
-<li><%= link_to event.artist, "/events/#{event.id}" %></li>
-<% end %>
-</ul>
+<div class="row" >
+  <div class="col-2">
+    <div class="list-group" id="list-tab" role="tablist" style="width: 400px;">
+      <% for event in @events %>
+        <%= link_to event.artist, "/events/#{event.id}",class:'list-group-item d-flex justify-content-between align-items-center' %>
+      <% end %>
+    </div>
+  </div>
+</div>
 <%= link_to 'New event', new_event_path, class:'btn btn-success' %>
-
 

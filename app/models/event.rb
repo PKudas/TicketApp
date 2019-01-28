@@ -10,7 +10,8 @@ class Event < ApplicationRecord
   def should_have_correct_prices
       return if price_low && price_high && price_low <= price_high
 
-      errors.add('Problem with prices','Prices are invalid')
+      errors.add(:price_low,'Low price is greater than price low')
+      errors.add(:price_high,'Low price low is greater than price low')
     end
 
   def date_cannot_be_past
